@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+<br/>
+<a class="btn btn-warning" href="/Product/Create">Create</a>
+<br/>
+<br/>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>    
+        <th>Name</th>    
+        <th>Price</th>    
+        <th>Category ID</th>    
+    </tr>
+
+    @foreach(var data in Model)
+     {
+        <tr>
+            <td>@data.ID</td>
+            <td>@data.Name</td>
+            <td>@data.Price</td>
+            <td>@data.CaegoriesID</td>
+
+            <td><a class="btn btn-secondary" href="/Product/Edit/@data.ID">Edit</a></td>
+            <td><a class="btn btn-danger" href="/Product/Delete/@data.ID">Delete</a></td>
+        </tr>
+
+
+
+     
+
+     }
+           
+</table>
+
